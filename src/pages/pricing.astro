@@ -8,7 +8,8 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Pricing - Affordable Digital Solutions in Nepal',
+  description: 'Transparent pricing for professional digital services. Choose from our flexible packages designed for businesses of all sizes. Quality solutions at competitive Nepali market rates.',
 };
 ---
 
@@ -16,95 +17,133 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    tagline="Pricing Plans"
+    title="Transparent Pricing for Every Business"
+    subtitle="Choose the perfect package that fits your budget and business needs. All our plans include professional quality and ongoing support."
   />
 
   <!-- Pricing Widget ******************* -->
 
-  <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
-    prices={[
-      {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-50 via-transparent to-transparent dark:from-slate-900 dark:via-slate-900/50 dark:to-transparent"></div>
+    <Prices
+      title="Choose Your Perfect Package"
+      subtitle="Transparent pricing with no hidden fees"
+      classes={{
+        container: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
+        title: 'text-4xl md:text-5xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400',
+        subtitle: 'text-xl text-gray-600 dark:text-gray-400 mb-12',
+        prices: 'gap-8 lg:gap-10',
+      }}
+      prices={[
+        {
+          title: 'STARTER PACK',
+          subtitle: 'Perfect for small businesses and startups',
+          price: '25,000',
         items: [
           {
-            description: 'Etiam in libero, et volutpat',
+            description: '✨ Professional Website Design',
           },
           {
-            description: 'Aenean ac nunc dolor tristique',
+            description: '📱 Mobile-Responsive Layout',
           },
           {
-            description: 'Cras scelerisque accumsan lib',
+            description: '🔍 Basic SEO Setup',
           },
           {
-            description: 'In hac habitasse',
+            description: '📨 Contact Form Integration',
+          },
+          {
+            description: '🌐 Social Media Links',
+          },
+          {
+            description: '🛟 1 Month Premium Support',
+          },
+          {
+            description: '🔄 Weekly Backups',
+          },
+          {
+            description: '🚀 Performance Optimization',
           },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Get Started',
+          href: '/contact',
         },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        title: 'PROFESSIONAL',
+        subtitle: 'Ideal for growing businesses',
+        price: '75,000',
         items: [
           {
-            description: 'Proin vel laoreet',
+            description: '💫 Everything in Starter +',
           },
           {
-            description: 'Ut efficitur habitasse egestas',
+            description: '🛍️ Full E-commerce Setup',
           },
           {
-            description: 'Volutpat hac curabitur',
+            description: '📈 Advanced SEO Package',
           },
           {
-            description: 'Pellentesque blandit ut nibh',
+            description: '📝 Content Management System',
           },
           {
-            description: 'Donec fringilla sem',
+            description: '💳 Payment Gateway Integration',
+          },
+          {
+            description: '📊 Advanced Analytics',
+          },
+          {
+            description: '🎯 Custom Features',
+          },
+          {
+            description: '🛟 3 Months Premium Support',
           },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Get Started',
+          href: '/contact',
         },
         hasRibbon: true,
-        ribbonTitle: 'popular',
+        ribbonTitle: 'POPULAR',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'ENTERPRISE',
+        subtitle: 'For large businesses and corporations',
+        price: '150,000',
         items: [
           {
-            description: 'Curabitur suscipit risus',
+            description: '🌟 Everything in Professional +',
           },
           {
-            description: 'Aliquam habitasse malesuada',
+            description: '⚡ Custom Web Application',
           },
           {
-            description: 'Suspendisse sit amet blandit',
+            description: '🔒 Enterprise Security Suite',
           },
           {
-            description: 'Suspendisse auctor blandit dui',
+            description: '🌍 Multi-language Support',
+          },
+          {
+            description: '🔄 API Integration & Development',
+          },
+          {
+            description: '⚡ Priority Support (24/7)',
+          },
+          {
+            description: '🛡️ Advanced Security Features',
+          },
+          {
+            description: '🛟 6 Months Premium Support',
           },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Get Started',
+          href: '/contact',
         },
       },
     ]}
@@ -113,38 +152,38 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
+    title="What's Included in Every Package"
+    subtitle="All our plans come with these essential features and benefits"
     columns={2}
     items={[
       {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
+        title: 'Professional Design',
+        description: 'Modern, responsive designs that look great on all devices and reflect your brand identity.',
+        icon: 'tabler:palette',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
+        title: 'SEO Optimization',
+        description: 'Built-in search engine optimization to help your website rank higher and attract more visitors.',
+        icon: 'tabler:search',
       },
       {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
+        title: 'Fast Loading',
+        description: 'Optimized code and images ensure your website loads quickly, improving user experience and SEO.',
+        icon: 'tabler:rocket',
       },
       {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
+        title: 'Mobile-First Design',
+        description: 'All websites are designed mobile-first, ensuring perfect performance on smartphones and tablets.',
+        icon: 'tabler:device-mobile',
       },
       {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
+        title: 'Security Features',
+        description: 'Built-in security measures to protect your website and your customers\' data.',
+        icon: 'tabler:shield',
       },
       {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
+        title: 'Ongoing Support',
+        description: 'We don\'t just build and leave. Get ongoing support and maintenance for your digital success.',
         icon: 'tabler:headset',
       },
     ]}
@@ -154,76 +193,122 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
+    title="Simple 4-Step Process to Get Started"
+    tagline="How It Works"
     isReversed={true}
     items={[
       {
-        title: 'Explore plans',
-        icon: 'tabler:number-1',
+        title: 'Free Consultation',
+        description: 'Schedule a free consultation to discuss your project requirements and goals.',
+        icon: 'tabler:message-circle',
       },
       {
-        title: 'Select a plan',
-        icon: 'tabler:number-2',
+        title: 'Custom Quote',
+        description: 'Receive a detailed, customized quote based on your specific needs and budget.',
+        icon: 'tabler:file-text',
       },
       {
-        title: 'Sign Up / Log In',
-        icon: 'tabler:number-3',
+        title: 'Project Approval',
+        description: 'Review and approve the proposal, then we begin development immediately.',
+        icon: 'tabler:check',
       },
       {
-        title: 'Review order',
-        icon: 'tabler:number-4',
-      },
-      {
-        title: 'Enter payment details',
-        icon: 'tabler:number-5',
-      },
-      {
-        title: 'Confirmation',
-        icon: 'tabler:number-6',
-      },
-      {
-        title: 'Download and start using the template(s)',
-        icon: 'tabler:number-7',
+        title: 'Launch & Support',
+        description: 'We launch your project and provide ongoing support to ensure long-term success.',
+        icon: 'tabler:rocket',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      alt: 'Our Process',
     }}
   />
+
+  <!-- Additional Services Section -->
+  <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Additional Services
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Enhance your digital presence with these add-on services
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <astro-icon name="tabler:chart-line" class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Digital Marketing</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Comprehensive marketing strategies to grow your online presence</p>
+            <p class="text-2xl font-bold text-gradient">From Rs. 15,000/month</p>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+              <astro-icon name="tabler:device-mobile" class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Mobile App Development</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Native and cross-platform mobile applications</p>
+            <p class="text-2xl font-bold text-gradient">From Rs. 75,000</p>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-tech rounded-full flex items-center justify-center mx-auto mb-4">
+              <astro-icon name="tabler:tools" class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Maintenance & Support</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">Ongoing support and maintenance packages</p>
+            <p class="text-2xl font-bold text-gradient">From Rs. 5,000/month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    title="Frequently Asked Questions"
+    subtitle="Get answers to common questions about our pricing and services"
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: 'Do you offer payment plans or installments?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          'Yes, we offer flexible payment plans for larger projects. You can pay 50% upfront and the remaining 50% upon project completion.',
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: 'What\'s included in the support period?',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          'Our support includes bug fixes, minor updates, and technical assistance. We\'re here to ensure your website runs smoothly.',
       },
       {
-        title: 'Can I switch between plans?',
+        title: 'Can I upgrade my package later?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          'Absolutely! You can upgrade your package at any time. We\'ll work with you to add new features and functionality.',
       },
       {
-        title: 'What payment methods do you accept?',
+        title: 'Do you provide hosting and domain services?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          'Yes, we can provide hosting and domain services as part of your package, or you can use your existing hosting provider.',
       },
       {
-        title: 'Are there any hidden fees beyond the displayed cost?',
+        title: 'How long does it take to complete a project?',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'Project timelines vary based on complexity. Simple websites take 2-3 weeks, while complex applications may take 6-8 weeks.',
+      },
+      {
+        title: 'Do you offer maintenance after the project is complete?',
+        description:
+          'Yes, we offer ongoing maintenance packages to keep your website secure, updated, and performing optimally.',
       },
     ]}
   />
@@ -231,13 +316,14 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="Ready to Transform Your Business?"
+    subtitle="Get started today with a free consultation. Our team is ready to help you choose the perfect package and bring your digital vision to life."
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
-        href: '/',
+        text: 'Get Free Consultation',
+        href: '/contact',
+        icon: 'tabler:rocket',
       },
     ]}
   />

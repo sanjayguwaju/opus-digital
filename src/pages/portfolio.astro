@@ -1,0 +1,447 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'Portfolio - Our Work - Tech Fytra',
+  description: 'Explore our portfolio of successful projects. From websites to mobile apps, see how we\'ve helped businesses in Nepal and beyond achieve their digital goals.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Our Portfolio"
+    title="Showcasing Digital Excellence"
+    subtitle="Discover how we've transformed businesses through innovative digital solutions. Each project represents our commitment to quality, creativity, and results."
+    actions={[
+      { variant: 'primary', text: 'Start Your Project', href: '/contact' },
+      { variant: 'secondary', text: 'View Services', href: '/services' }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Tech Fytra Portfolio',
+    }}
+  />
+
+  <!-- Portfolio Categories -->
+  <div class="py-16 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Our Project Categories
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          We specialize in various types of digital solutions
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <astro-icon name="tabler:world" class="w-10 h-10 text-white" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Websites</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Professional, responsive websites that drive results
+          </p>
+          <div class="text-sm text-gray-500 dark:text-gray-400">
+            <strong>50+ Projects</strong>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="w-20 h-20 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <astro-icon name="tabler:device-mobile" class="w-10 h-10 text-white" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Mobile Apps</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Native and cross-platform mobile applications
+          </p>
+          <div class="text-sm text-gray-500 dark:text-gray-400">
+            <strong>25+ Projects</strong>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+          <div class="w-20 h-20 bg-gradient-tech rounded-full flex items-center justify-center mx-auto mb-6">
+            <astro-icon name="tabler:shopping-cart" class="w-10 h-10 text-white" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">E-commerce</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">
+            Complete online store solutions
+          </p>
+          <div class="text-sm text-gray-500 dark:text-gray-400">
+            <strong>30+ Projects</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Projects -->
+  <div class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Featured Projects
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          A selection of our most impactful work
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+            <astro-icon name="tabler:world" class="w-20 h-20 text-white" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Himalayan Crafts</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              E-commerce website for traditional Nepali handicrafts. Features payment integration, inventory management, and multi-language support.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">E-commerce</span>
+              <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Payment Gateway</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Multi-language</span>
+            </div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <strong>Result:</strong> 300% increase in online sales
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
+            <astro-icon name="tabler:device-mobile" class="w-20 h-20 text-white" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">FoodDelivery Nepal</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Cross-platform food delivery app with real-time tracking, payment processing, and restaurant management system.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Mobile App</span>
+              <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">Real-time</span>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Payment</span>
+            </div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <strong>Result:</strong> 50,000+ downloads
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+            <astro-icon name="tabler:building-store" class="w-20 h-20 text-white" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Nepali Fashion</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Modern fashion e-commerce platform with advanced filtering, size recommendations, and social media integration.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Fashion</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Advanced Filtering</span>
+              <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Social Media</span>
+            </div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <strong>Result:</strong> 200% traffic increase
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+            <astro-icon name="tabler:chart-line" class="w-20 h-20 text-white" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Digital Marketing Campaign</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Comprehensive digital marketing strategy for a tourism company, including SEO, social media, and content marketing.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">SEO</span>
+              <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Social Media</span>
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Content</span>
+            </div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <strong>Result:</strong> 400% lead generation increase
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Projects Completed', amount: '150+' },
+      { title: 'Happy Clients', amount: '120+' },
+      { title: 'Years Experience', amount: '4+' },
+      { title: 'Success Rate', amount: '98%' },
+    ]}
+  />
+
+  <!-- Technologies We Use -->
+  <div class="py-16 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Technologies We Master
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          We use cutting-edge technologies to deliver exceptional results
+        </p>
+      </div>
+      
+      <!-- Technology Categories -->
+      <div class="mb-12">
+        <div class="flex flex-wrap justify-center gap-6 mb-8">
+          <button class="px-6 py-2 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-100 transition-colors">Frontend</button>
+          <button class="px-6 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-900 dark:text-green-100 transition-colors">Backend</button>
+          <button class="px-6 py-2 rounded-full bg-purple-100 text-purple-700 hover:bg-purple-200 dark:bg-purple-900 dark:text-purple-100 transition-colors">Mobile</button>
+          <button class="px-6 py-2 rounded-full bg-orange-100 text-orange-700 hover:bg-orange-200 dark:bg-orange-900 dark:text-orange-100 transition-colors">Cloud</button>
+          <button class="px-6 py-2 rounded-full bg-pink-100 text-pink-700 hover:bg-pink-200 dark:bg-pink-900 dark:text-pink-100 transition-colors">Design</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <!-- Frontend -->
+        <div class="text-center group cursor-pointer">
+          <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110">
+            <astro-icon name="logos:react" class="w-full h-full" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">React</h3>
+        </div>
+        
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-black to-gray-800 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:nextjs-icon" class="w-10 h-10 text-white" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Next.js</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:astro" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Astro</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-[#38bdf8] to-[#818cf8] rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:tailwindcss-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Tailwind</h3>
+        </div>
+
+        <!-- Backend -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:nodejs-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Node.js</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:typescript-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">TypeScript</h3>
+        </div>
+
+        <!-- Databases -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:mongodb-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">MongoDB</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:postgresql" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">PostgreSQL</h3>
+        </div>
+
+        <!-- Mobile -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:react" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">React Native</h3>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:aws" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">AWS</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            <astro-icon name="logos:docker-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Docker</h3>
+        </div>
+
+        <!-- UI/Design Tools -->
+        <div class="text-center group cursor-pointer">
+          <div class="w-20 h-20 flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110">
+            <astro-icon name="logos:figma" class="w-full h-full" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Figma</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:angular-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Angular</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:vue" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Vue.js</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:javascript" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">JavaScript</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:python" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Python</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:html-5" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">HTML5</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:css-3" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">CSS3</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:php" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">PHP</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:mysql" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">MySQL</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:git-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Git</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:redux" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Redux</h3>
+        </div>
+
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <astro-icon name="logos:django-icon" class="w-10 h-10" />
+          </div>
+          <h3 class="font-semibold text-gray-900 dark:text-white">Django</h3>
+        </div>
+      </div>
+
+      <!-- Technology Categories -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-white dark:bg-slate-700 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Frontend Development</h3>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+            <li>• Modern UI/UX Design</li>
+            <li>• Responsive Layouts</li>
+            <li>• Progressive Web Apps</li>
+            <li>• Performance Optimization</li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-white dark:bg-slate-700 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Backend Development</h3>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+            <li>• API Development</li>
+            <li>• Database Design</li>
+            <li>• Authentication & Security</li>
+            <li>• Scalable Architecture</li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-white dark:bg-slate-700 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Mobile Development</h3>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+            <li>• Cross-platform Apps</li>
+            <li>• Native Performance</li>
+            <li>• Offline Capabilities</li>
+            <li>• Push Notifications</li>
+          </ul>
+        </div>
+
+        <div class="p-6 bg-white dark:bg-slate-700 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">DevOps & Cloud</h3>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+            <li>• CI/CD Pipelines</li>
+            <li>• Cloud Infrastructure</li>
+            <li>• Monitoring & Logging</li>
+            <li>• Security Best Practices</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '/contact',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    title="Ready to Join Our Success Stories?"
+    subtitle="Let's create something amazing together. Your project could be our next featured success story."
+  />
+</Layout> 

@@ -5,9 +5,12 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Tech Fytra - Leading Digital Agency in Nepal',
+  description: 'Learn about Tech Fytra, a premier digital agency in Nepal specializing in website development, mobile apps, and digital marketing. Our story of innovation and growth.',
 };
 ---
 
@@ -15,61 +18,93 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About Tech Fytra"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      alt: 'Tech Fytra Team',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      Pioneering Digital Innovation in <br />
+      <span class="text-accent dark:text-white">Nepal</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Founded in 2020, Tech Fytra has been at the forefront of digital transformation in Nepal. We're a team of passionate developers, designers, and marketers dedicated to helping businesses thrive in the digital age. From startups to established enterprises, we've been the trusted partner for over 150+ businesses across Nepal and beyond.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Our Journey in Numbers"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Projects Delivered', amount: '150+' },
+      { title: 'Happy Clients', amount: '120+' },
+      { title: 'Team Members', amount: '12' },
+      { title: 'Years of Excellence', amount: '4+' },
     ]}
   />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Our Mission',
+        description:
+          'To democratize digital excellence by providing world-class digital solutions at accessible prices, enabling every business in Nepal to compete globally.',
+      },
+      {
+        title: 'Our Vision',
+        description:
+          'To be the most trusted digital partner for businesses in Nepal, known for innovation, quality, and unwavering commitment to client success.',
+      },
+      {
+        title: 'Our Values',
+        description:
+          'Integrity, innovation, excellence, and client-centricity form the foundation of everything we do at Tech Fytra.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Tech Fytra Mission',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What Drives Us</h3>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+        At Tech Fytra, we believe that every business deserves access to world-class digital solutions. Our mission is to bridge the gap between local businesses and global digital standards, ensuring that Nepali companies can compete effectively in the international marketplace.
+      </p>
+    </Fragment>
+  </Content>
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Our Core Strengths"
+    subtitle="What sets us apart in the competitive digital landscape"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Local Market Expertise',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Deep understanding of Nepali business culture, market dynamics, and consumer behavior. We speak your language and understand your challenges.',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Interior Design',
+        title: 'Global Technology Standards',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'We use cutting-edge technologies and follow international best practices to ensure your digital solutions meet global standards.',
+        icon: 'tabler:world',
       },
       {
-        title: 'Photography',
+        title: 'Affordable Excellence',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Premium quality digital services at competitive Nepali market rates. We believe excellence shouldn\'t be limited by budget constraints.',
+        icon: 'tabler:coin',
       },
     ]}
   />
@@ -81,68 +116,73 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: '24/7 Support',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Round-the-clock support in Nepali timezone. We\'re here when you need us, ensuring your business never faces unnecessary downtime.',
+        icon: 'tabler:headset',
       },
       {
-        title: 'Blog',
+        title: 'Quick Delivery',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'Fast turnaround times without compromising quality. We understand that in business, time is money, and we respect both.',
+        icon: 'tabler:rocket',
       },
       {
-        title: 'Business',
+        title: 'Ongoing Partnership',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'We build long-term relationships with our clients, providing continuous support and updates to ensure your digital success.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Branding',
+        title: 'Custom Solutions',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          'Every project is unique. We create tailored solutions that perfectly align with your business goals and target audience.',
+        icon: 'tabler:settings',
       },
       {
-        title: 'Medical',
+        title: 'SEO & Marketing',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          'Comprehensive digital marketing strategies that drive real results, helping you reach and engage your target audience effectively.',
+        icon: 'tabler:chart-line',
       },
       {
-        title: 'Fashion Design',
+        title: 'Mobile-First Design',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'All our solutions are designed mobile-first, ensuring optimal performance across all devices and screen sizes.',
+        icon: 'tabler:device-mobile',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      alt: 'Tech Fytra Services',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Our Work Process"
+    subtitle="A proven methodology that ensures successful project delivery and client satisfaction"
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Discovery & Planning',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'We start by understanding your business, goals, target audience, and competition. This foundation ensures we create solutions that truly serve your needs.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Design & Development',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Our expert team creates stunning designs and develops robust solutions using the latest technologies, ensuring both beauty and functionality.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Testing & Quality Assurance',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Rigorous testing across all devices and browsers ensures your digital solution works flawlessly for every user, every time.',
+      },
+      {
+        title: 'Launch & Support',
+        description:
+          'We launch your project with full support and provide ongoing maintenance to ensure long-term success and growth.',
       },
     ]}
   />
@@ -150,29 +190,29 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Our Achievements"
+    subtitle="Milestones that showcase our commitment to excellence and innovation"
     isReversed={true}
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: 'View Our Work',
+      href: '/portfolio',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: '150+ Successful Projects',
+        description: 'From simple websites to complex e-commerce platforms, we\'ve delivered solutions that drive real business results.',
+        icon: 'tabler:check',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: '120+ Satisfied Clients',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Our client retention rate speaks volumes about our commitment to quality and customer satisfaction.',
+        icon: 'tabler:heart',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Industry Recognition',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+          'Awarded as one of the top digital agencies in Nepal, recognized for innovation and excellence in digital solutions.',
         icon: 'tabler:award',
       },
     ]}
@@ -181,25 +221,29 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
+    title="Our Service Areas"
+    tagline="Coverage"
     columns={4}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Kathmandu Valley',
+        description: 'Central hub for major businesses and startups',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'Pokhara',
+        description: 'Growing business community and tourism sector',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Biratnagar',
+        description: 'Industrial and commercial business center',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Online Services',
+        description: 'Remote services for businesses worldwide',
+        icon: 'tabler:globe',
       },
     ]}
   />
@@ -207,22 +251,37 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Get In Touch"
+    tagline="Contact Us"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Live Chat Support',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+          'Get instant answers to your questions through our live chat system. Our team is available during business hours to assist you.',
         icon: 'tabler:messages',
       },
       {
-        title: 'Call us',
+        title: 'Phone & WhatsApp',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'Call us directly or reach out via WhatsApp for immediate assistance. We\'re here to help you succeed.',
+        icon: 'tabler:phone',
       },
     ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '/contact',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    title="Ready to Work With Us?"
+    subtitle="Let's discuss your project and create something amazing together. Your success is our success."
   />
 </Layout>

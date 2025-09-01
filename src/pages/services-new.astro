@@ -1,0 +1,267 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+// Ensure styles are imported in your main CSS file
+import '../assets/styles/custom.css';
+
+const metadata = {
+  title: 'Premium Digital Services - Tech Fytra',
+  description: 'Transform your business with our comprehensive digital solutions. Web development, mobile apps, e-commerce, and digital marketing services tailored for modern businesses.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget with Animation -->
+  <div class="fade-in">
+    <Hero
+      tagline="Elevate Your Digital Presence"
+      title="Transforming Visions into Digital Reality"
+      subtitle="Experience world-class web development, stunning designs, and result-driven digital solutions tailored for modern businesses. Your success story starts here."
+      actions={[
+        { 
+          variant: 'primary',
+          text: 'Start Your Project',
+          href: '/contact',
+          icon: 'tabler:rocket',
+          class: 'animate-button'
+        },
+        { 
+          variant: 'secondary',
+          text: 'View Our Work',
+          href: '/#portfolio',
+          icon: 'tabler:briefcase',
+          class: 'animate-button'
+        }
+      ]}
+      image={{
+        src: '~/assets/images/hero-image.png',
+        alt: 'Tech Fytra Digital Services Showcase',
+      }}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 gradient-bg">
+          <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        </div>
+      </Fragment>
+    </Hero>
+  </div>
+
+  <!-- Special Offer Banner -->
+  <div class="relative bg-blue-600 dark:bg-blue-800">
+    <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+      <div class="pr-16 sm:text-center sm:px-16">
+        <p class="font-medium text-white">
+          <span class="md:hidden">Limited Time Offer!</span>
+          <span class="hidden md:inline">Special Launch Offer: Get 20% off on all website development packages!</span>
+          <span class="block sm:ml-2 sm:inline-block">
+            <a href="/contact" class="text-white font-bold underline">Learn more →</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Premium Services Section -->
+  <div class="fade-in" style="animation-delay: 0.2s">
+    <Features2
+      title="Premium Digital Services"
+      subtitle="Elevate your business with our comprehensive suite of digital solutions"
+      tagline="What We Offer"
+      columns={3}
+      items={[
+        {
+          title: 'Custom Web Development',
+          description:
+            'Bespoke websites built with cutting-edge technology. From responsive business sites to complex e-commerce platforms, we create digital experiences that convert visitors into customers.',
+          icon: 'tabler:brand-react',
+          classes: { wrapper: 'service-card' },
+          callToAction: {
+            text: 'Explore Web Services',
+            href: '#web',
+          },
+        },
+        {
+          title: 'Mobile App Development',
+          description:
+            'Native and cross-platform mobile applications that deliver exceptional user experiences. We build apps that engage users and drive business growth.',
+          icon: 'tabler:device-mobile',
+          classes: { wrapper: 'service-card' },
+          callToAction: {
+            text: 'View App Services',
+            href: '#mobile',
+          },
+        },
+        {
+          title: 'E-commerce Solutions',
+          description:
+            'Complete online store development with secure payment gateways, inventory management, and marketing tools to boost your sales and streamline operations.',
+          icon: 'tabler:shopping-cart',
+          classes: { wrapper: 'service-card' },
+          callToAction: {
+            text: 'Learn More',
+            href: '#ecommerce',
+          },
+        },
+        {
+          title: 'Digital Marketing',
+          description:
+            'Strategic SEO, content marketing, and social media campaigns that increase your visibility and drive qualified traffic to your business.',
+          icon: 'tabler:chart-arrows',
+          classes: { wrapper: 'service-card' },
+          callToAction: {
+            text: 'Marketing Services',
+            href: '#marketing',
+          },
+        },
+        {
+          title: 'UI/UX Design',
+          description:
+            'User-centered design that creates intuitive, engaging interfaces. We combine aesthetics with functionality to deliver memorable digital experiences.',
+          icon: 'tabler:palette',
+          classes: { wrapper: 'service-card' },
+          callToAction: {
+            text: 'Design Services',
+            href: '#design',
+          },
+        },
+        {
+          title: 'Cloud Solutions',
+          description:
+            'Scalable cloud infrastructure and deployment services that ensure your applications run smoothly and securely with optimal performance.',
+          icon: 'tabler:cloud',
+          classes: { wrapper: 'service-card' },
+          callToAction: {
+            text: 'Cloud Services',
+            href: '#cloud',
+          },
+        },
+      ]}
+    />
+  </div>
+
+  <!-- Process Section -->
+  <div class="fade-in" style="animation-delay: 0.4s">
+    <Content
+      isReversed
+      tagline="Our Process"
+      title="How We Deliver Excellence"
+      items={[
+        {
+          title: '1. Discovery & Planning',
+          description:
+            'We start by understanding your business goals, target audience, and project requirements to create a comprehensive roadmap.',
+          icon: 'tabler:bulb',
+        },
+        {
+          title: '2. Design & Development',
+          description:
+            'Our team crafts beautiful designs and develops robust solutions using the latest technologies and best practices.',
+          icon: 'tabler:code',
+        },
+        {
+          title: '3. Testing & Optimization',
+          description:
+            'Rigorous testing ensures your solution is bug-free, secure, and optimized for maximum performance.',
+          icon: 'tabler:test-pipe',
+        },
+        {
+          title: '4. Launch & Support',
+          description:
+            'We handle the deployment process and provide ongoing support to ensure your solution continues to perform excellently.',
+          icon: 'tabler:rocket',
+        },
+      ]}
+      image={{
+        src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+        alt: 'Our Development Process',
+      }}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Proven Methodology</h3>
+        <p class="text-lg text-gray-600 dark:text-gray-400">
+          Our structured approach ensures consistent quality and timely delivery across all projects. We combine agile methodologies with industry best practices to deliver solutions that exceed expectations.
+        </p>
+      </Fragment>
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-slate-900 opacity-75"></div>
+      </Fragment>
+    </Content>
+  </div>
+
+  <!-- Stats Widget with Animation -->
+  <div class="fade-in" style="animation-delay: 0.6s">
+    <Stats
+      stats={[
+        { title: 'Projects Delivered', amount: '150+' },
+        { title: 'Happy Clients', amount: '120+' },
+        { title: 'Team Experts', amount: '15+' },
+        { title: 'Years Experience', amount: '4+' },
+      ]}
+      classes={{ amount: 'counter' }}
+    />
+  </div>
+
+  <!-- Testimonials with Enhanced Design -->
+  <div class="fade-in" style="animation-delay: 0.8s">
+    <Testimonials
+      title="Client Success Stories"
+      subtitle="Hear from businesses we have helped transform"
+      testimonials={[
+        {
+          testimonial: 'Tech Fytra delivered beyond our expectations. The website they built has dramatically increased our online presence and customer engagement.',
+          name: 'Sarah Johnson',
+          job: 'CEO, TechStart Nepal',
+          image: {
+            src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+            alt: 'Sarah Johnson',
+          },
+        },
+        {
+          testimonial: 'The mobile app they developed for us has revolutionized how we interact with our customers. Excellent work!',
+          name: 'Raj Sharma',
+          job: 'Founder, Nepal Eats',
+          image: {
+            src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+            alt: 'Raj Sharma',
+          },
+        },
+        {
+          testimonial: 'Their digital marketing expertise helped us achieve a 200% increase in online sales within just 6 months.',
+          name: 'Maya Gurung',
+          job: 'Marketing Director, Mountain Gear',
+          image: {
+            src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+            alt: 'Maya Gurung',
+          },
+        },
+      ]}
+    />
+  </div>
+
+  <!-- Enhanced Call to Action -->
+  <div class="fade-in" style="animation-delay: 1s">
+    <CallToAction
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Start Your Digital Journey',
+          href: '/contact',
+          icon: 'tabler:rocket',
+          class: 'animate-button',
+        },
+      ]}
+      title="Ready to Transform Your Business?"
+      subtitle="Get in touch today for a free consultation and let us help you create a digital solution that drives real results."
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 gradient-bg opacity-90"></div>
+      </Fragment>
+    </CallToAction>
+  </div>
+</Layout>

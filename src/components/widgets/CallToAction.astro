@@ -25,34 +25,79 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <div
-    class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600"
-  >
-    <Headline
-      title={title}
-      subtitle={subtitle}
-      tagline={tagline}
-      classes={{
-        container: 'mb-0 md:mb-0',
-        title: 'text-4xl md:text-4xl font-bold tracking-tighter mb-4 font-heading',
-        subtitle: 'text-xl text-muted dark:text-slate-400',
-      }}
-    />
-    {
-      actions && (
-        <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
-          {Array.isArray(actions) ? (
-            actions.map((action) => (
-              <div class="flex w-full sm:w-auto">
-                <Button {...(action || {})} class="w-full sm:mb-0" />
-              </div>
-            ))
-          ) : (
-            <Fragment set:html={actions} />
-          )}
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <!-- Enhanced CTA with gradient background and floating elements -->
+  <div class="relative">
+    <!-- Background gradient and floating elements -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 rounded-3xl"></div>
+    <div class="absolute top-0 left-0 w-32 h-32 bg-gradient-primary rounded-full opacity-10 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-40 h-40 bg-gradient-secondary rounded-full opacity-10 blur-3xl"></div>
+    
+    <!-- Floating decorative elements -->
+    <div class="absolute top-8 left-8 w-4 h-4 bg-gradient-primary rounded-full animate-float opacity-60"></div>
+    <div class="absolute top-16 right-16 w-3 h-3 bg-gradient-secondary rounded-full animate-float opacity-60" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-8 left-1/4 w-2 h-2 bg-gradient-tech rounded-full animate-float opacity-60" style="animation-delay: 2s;"></div>
+    
+    <div class="relative max-w-4xl mx-auto text-center p-12 md:p-16">
+      <Headline
+        title={title}
+        subtitle={subtitle}
+        tagline={tagline}
+        classes={{
+          container: 'mb-0 md:mb-0',
+          title: 'text-4xl md:text-5xl font-bold tracking-tighter mb-6 font-heading text-gray-900 dark:text-white',
+          subtitle: 'text-xl text-gray-600 dark:text-slate-300 leading-relaxed',
+        }}
+      />
+      
+      <!-- Enhanced action buttons -->
+      {
+        actions && (
+          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-8">
+            {Array.isArray(actions) ? (
+              actions.map((action, index) => (
+                <div class="flex w-full sm:w-auto" style={`animation-delay: ${index * 0.2}s`}>
+                  <Button {...(action || {})} class="w-full sm:mb-0 text-lg px-8 py-4" />
+                </div>
+              ))
+            ) : (
+              <Fragment set:html={actions} />
+            )}
+          </div>
+        )
+      }
+      
+      <!-- Trust indicators -->
+      <div class="mt-12 flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+        <div class="flex items-center space-x-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <span>24/7 Support</span>
         </div>
-      )
-    }
+        <div class="flex items-center space-x-2">
+          <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+          <span>Money-back Guarantee</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+          <span>Free Consultation</span>
+        </div>
+      </div>
+      
+      <!-- Success metrics -->
+      <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+        <div class="p-4">
+          <div class="text-2xl font-bold text-gradient">98%</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">Client Satisfaction</div>
+        </div>
+        <div class="p-4">
+          <div class="text-2xl font-bold text-gradient">24hrs</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">Response Time</div>
+        </div>
+        <div class="p-4">
+          <div class="text-2xl font-bold text-gradient">500+</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">Projects Delivered</div>
+        </div>
+      </div>
+    </div>
   </div>
 </WidgetWrapper>

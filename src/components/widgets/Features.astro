@@ -20,17 +20,46 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
-  <ItemGrid
-    items={items}
-    columns={columns}
-    defaultIcon={defaultIcon}
-    classes={{
-      container: '',
-      title: 'md:text-[1.3rem]',
-      icon: 'text-white bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4 rtl:ml-4 rtl:mr-0',
-      ...((classes?.items as Record<string, never>) ?? {}),
-    }}
-  />
+  
+  <!-- Enhanced features grid with better spacing and animations -->
+  <div class="grid gap-8 md:gap-12 lg:gap-16 mt-16">
+    {items.map((item, index) => (
+      <div class={`group ${columns === 2 ? 'md:grid md:grid-cols-2 md:gap-8 md:items-center' : ''} ${index % 2 === 1 && columns === 2 ? 'md:col-start-2' : ''}`}>
+        <div class={`${index % 2 === 1 && columns === 2 ? 'md:col-start-1 md:row-start-1' : ''}`}>
+          <div class="flex items-start mb-6 md:mb-0">
+            <div class="feature-icon group-hover:animate-pulse-glow">
+              <astro-icon name={item.icon || defaultIcon} class="w-full h-full" />
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl md:text-3xl font-bold tracking-tight dark:text-white mb-4 group-hover:text-gradient transition-all duration-300">
+                {item.title}
+              </h3>
+              <p class="text-lg text-muted dark:text-slate-300 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Visual element for odd items -->
+        {index % 2 === 1 && columns === 2 && (
+          <div class="hidden md:block md:col-start-2 md:row-start-1">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-primary rounded-2xl opacity-10 blur-xl"></div>
+              <div class="relative bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 h-48 flex items-center justify-center">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse-glow">
+                    <astro-icon name="tabler:sparkles" class="w-8 h-8 text-white" />
+                  </div>
+                  <p class="text-sm text-gray-600 dark:text-gray-300 font-medium">Premium Feature</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
 </WidgetWrapper>

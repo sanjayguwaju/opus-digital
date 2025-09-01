@@ -1,7 +1,15 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Fea        {
+        title: 'Cost-Effective Solutions',
+        description:
+          'Get premium digital services at competitive Nepali market rates. We believe quality should not be compromised by budget constraints.',
+        icon: 'tabler:coin',
+      },title: 'Cost-Effective Solutions',
+        description:
+          'Get premium digital services at competitive Nepali market rates. We believe quality should not be compromised by budget constraints.',
+        icon: 'tabler:coin',s2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -18,49 +26,18 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Elevate Your Digital Presence"
-    title="Transforming Visions into Digital Reality"
-    subtitle="Experience world-class web development, stunning designs, and result-driven digital solutions tailored for modern businesses. Your success story starts here."
+    tagline="Our Services"
+    title="Transform Your Business with Professional Digital Solutions"
+    subtitle="From startups to enterprises, we deliver cutting-edge websites, mobile apps, and digital marketing strategies that drive real results. Based in Nepal, serving businesses worldwide."
     actions={[
-      { 
-        variant: 'primary',
-        text: 'Start Your Project',
-        href: '/contact',
-        icon: 'tabler:rocket',
-      },
-      { 
-        variant: 'secondary',
-        text: 'View Our Work',
-        href: '/#portfolio',
-        icon: 'tabler:briefcase'
-      }
+      { variant: 'primary', text: 'Get Free Quote', href: '/contact' },
+      { variant: 'secondary', text: 'View Portfolio', href: '/#portfolio' }
     ]}
     image={{
-      src: '~/assets/images/hero-image.png',
-      alt: 'Tech Fytra Digital Services Showcase',
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Digital Services Hero Image',
     }}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-100 dark:from-slate-900 dark:to-slate-800">
-        <div class="absolute inset-0 bg-grid-pattern opacity-10 dark:opacity-20"></div>
-      </div>
-    </Fragment>
-  </Hero>
-
-  <!-- Announcement Widget for Special Offer -->
-  <div class="relative bg-blue-600 dark:bg-blue-800">
-    <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-      <div class="pr-16 sm:text-center sm:px-16">
-        <p class="font-medium text-white">
-          <span class="md:hidden">Limited Time Offer!</span>
-          <span class="hidden md:inline">Special Launch Offer: Get 20% off on all website development packages!</span>
-          <span class="block sm:ml-2 sm:inline-block">
-            <a href="/contact" class="text-white font-bold underline">Learn more →</a>
-          </span>
-        </p>
-      </div>
-    </div>
-  </div>
+  />
 
   <!-- Services Overview Widget ************** -->
 
@@ -74,9 +51,9 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Innovative Digital Solutions"
-    subtitle="Crafting exceptional digital experiences that drive growth and success"
-    tagline="Our Services"
+    title="Why Choose Tech Fytra?"
+    subtitle="We combine technical expertise with creative design to deliver exceptional results"
+    tagline="Our Approach"
     columns={3}
     items={[
       {
@@ -99,7 +76,7 @@ const metadata = {
       {
         title: '24/7 Support',
         description:
-          'Round-the-clock support in Nepali timezone, ensuring your business never faces downtime. We are here when you need us.',
+          "Round-the-clock support in Nepali timezone, ensuring your business never faces downtime. We're here when you need us.",
         icon: 'tabler:headset',
       },
       {
@@ -111,7 +88,7 @@ const metadata = {
       {
         title: 'Ongoing Maintenance',
         description:
-          'We do not just build and leave. We provide ongoing maintenance, updates, and support to keep your digital assets running smoothly.',
+          "We do not just build and leave. We provide ongoing maintenance, updates, and support to keep your digital assets running smoothly.",
         icon: 'tabler:tools',
       },
     ]}
@@ -174,13 +151,13 @@ const metadata = {
       {
         title: 'Cost-Effective Solutions',
         description:
-          'Get premium digital services at competitive Nepali market rates. We believe quality should not be compromised by budget constraints.',
+          "Get premium digital services at competitive Nepali market rates. We believe quality should not be compromised by budget constraints.",
         icon: 'tabler:wallet',
       },
       {
         title: 'Quick Implementation',
         description:
-          'Fast delivery without sacrificing quality. We understand that in todays fast-paced business environment, speed to market is crucial.',
+          "Fast delivery without sacrificing quality. We understand that in todays fast-paced business environment, speed to market is crucial.",
         icon: 'tabler:clock',
       },
       {
@@ -218,10 +195,10 @@ const metadata = {
 
   <Testimonials
     title="What Our Clients Say"
-    subtitle="Real feedback from businesses we have helped grow"
+    subtitle="Real feedback from businesses we've helped grow"
     testimonials={[
       {
-        testimonial: 'Tech Fytra transformed our business with a professional website and digital marketing strategy. Our online presence has never been stronger, and we are seeing real growth in our customer base. Highly recommended!',
+        testimonial: `Tech Fytra transformed our business with a professional website and digital marketing strategy. Our online presence has never been stronger, and we're seeing real growth in our customer base. Highly recommended!`,
         name: 'Rajesh Shrestha',
         job: 'Owner, Himalayan Crafts',
         image: {
@@ -230,7 +207,7 @@ const metadata = {
         },
       },
       {
-        testimonial: 'The team at Tech Fytra delivered our e-commerce website on time and within budget. The site looks professional and functions perfectly. Our online sales have increased by 300% since launch.',
+        testimonial: `The team at Tech Fytra delivered our e-commerce website on time and within budget. The site looks professional and functions perfectly. Our online sales have increased by 300% since launch.`,
         name: 'Priya Tamang',
         job: 'Founder, Nepali Fashion',
         image: {
@@ -239,7 +216,7 @@ const metadata = {
         },
       },
       {
-        testimonial: 'As a startup, we needed a mobile app that could compete with established players. Tech Fytra delivered exactly what we needed - a fast, user-friendly app that our customers love.',
+        testimonial: `As a startup, we needed a mobile app that could compete with established players. Tech Fytra delivered exactly what we needed - a fast, user-friendly app that our customers love.`,
         name: 'Amit Thapa',
         job: 'CEO, FoodDelivery Nepal',
         image: {
@@ -268,6 +245,6 @@ const metadata = {
       },
     ]}
     title="Ready to Transform Your Business?"
-    subtitle="Let us discuss your project and create a digital solution that drives real results. Get your free consultation today."
+    subtitle="Let's discuss your project and create a digital solution that drives real results. Get your free consultation today."
   />
 </Layout>

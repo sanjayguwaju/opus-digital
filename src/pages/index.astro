@@ -3,8 +3,8 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Services from '~/components/widgets/Services.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -35,9 +35,9 @@ const metadata = {
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Let’s build your dream website together.
+      Let's build your dream website together.
       <span class="hidden xl:inline">Beautifully crafted with</span>
-      <span class="text-accent dark:text-white"> Yukti Tech</span>, your trusted digital partner.
+      <span class="text-accent dark:text-white"> Tech Fytra</span>, your trusted digital partner.
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -56,49 +56,97 @@ const metadata = {
 
   <!-- Features Widget *************** -->
 
-  <Features
+  <Features2
     id="features"
-    tagline="Features"
-    title="What You Get With Yukti Tech"
-    subtitle="Powerful, modern, and scalable websites designed to help your business grow online."
+    title="Why Choose Tech Fytra?"
+    subtitle="Experience excellence in every aspect of your digital journey"
+    tagline="Our Capabilities"
     items={[
       {
-        title: 'Modern Tech Stack',
+        title: 'Next-Generation Technology',
         description:
-          'Built with Astro and Tailwind CSS for lightning-fast performance, clean design, and endless customization.',
-        icon: 'tabler:brand-tailwind',
+          'Harness the power of Astro and Tailwind CSS for blazing-fast, visually stunning websites that keep you ahead of the competition.',
+        icon: 'tabler:code',
+        callToAction: {
+          text: 'Learn More',
+          href: '#',
+        },
       },
       {
-        title: 'Pre-Built Components',
+        title: 'Premium Design Components',
         description:
-          'Ready-to-use, responsive components tailored for Marketing Websites, SaaS platforms, Blogs, Portfolios, and more.',
-        icon: 'tabler:components',
+          'Launch your digital presence with our meticulously crafted, conversion-optimized components perfect for any business venture.',
+        icon: 'tabler:puzzle',
+        callToAction: {
+          text: 'View Components',
+          href: '#',
+        },
       },
       {
-        title: 'Industry Best Practices',
+        title: 'Industry-Leading Standards',
         description:
-          'We follow secure coding, optimized workflows, and user-first design to deliver high-quality digital experiences.',
-        icon: 'tabler:list-check',
+          'Set new benchmarks with our cutting-edge practices in security, performance, and user experience.',
+        icon: 'tabler:award',
+        callToAction: {
+          text: 'Our Standards',
+          href: '#',
+        },
       },
       {
-        title: 'Blazing Page Speed',
+        title: 'Lightning Performance',
         description:
-          'Optimized for Core Web Vitals — ensuring top search rankings, smooth UI/UX, and higher conversions.',
-        icon: 'tabler:rocket',
+          'Experience unmatched speed with optimized Core Web Vitals that keep your visitors engaged and amazed.',
+        icon: 'tabler:bolt',
+        callToAction: {
+          text: 'Speed Metrics',
+          href: '#',
+        },
       },
       {
-        title: 'SEO-Friendly',
+        title: 'SEO Mastery',
         description:
-          'Every website is built with SEO in mind, helping your business rank higher and reach the right audience.',
-        icon: 'tabler:arrows-right-left',
+          'Dominate search rankings with our advanced strategies that connect your business with the right audience.',
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          text: 'SEO Details',
+          href: '#',
+        },
       },
       {
-        title: 'Collaborative Approach',
+        title: 'Dedicated Support',
         description:
-          'We value your input and ideas — working with you to create a website that truly represents your brand.',
-        icon: 'tabler:bulb',
+          'Get personalized attention and expert guidance throughout your journey to digital excellence.',
+        icon: 'tabler:heart',
+        callToAction: {
+          text: 'Our Process',
+          href: '#',
+        },
       },
     ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-900">
+        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-blue-100 dark:to-slate-800"></div>
+      </div>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+        We combine cutting-edge technology with creative excellence to deliver websites that make a lasting impact. 
+        Our approach is focused on your success, providing solutions that are:
+        <span class="font-semibold text-primary">Fast</span> • 
+        <span class="font-semibold text-primary">Beautiful</span> • 
+        <span class="font-semibold text-primary">Reliable</span>
+      </span>
+    </Fragment>
+  </Features2>
+
+  <!-- Services Widget *************** -->
+
+  <Services
+    id="services"
+    tagline="Services"
+    title="Our Digital Services"
+    subtitle="Comprehensive solutions to grow your business online - from websites to mobile apps, SEO to digital marketing"
   />
 
   <!-- Content Widget **************** -->
@@ -382,9 +430,9 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Websites Delivered', amount: '250+' },
-      { title: 'Happy Clients', amount: '180+' },
-      { title: 'Years of Experience', amount: '5+' },
+      { title: 'Websites Delivered', amount: '150+' },
+      { title: 'Happy Clients', amount: '120+' },
+      { title: 'Years of Experience', amount: '4+' },
       { title: 'Industries Served', amount: '20+' },
     ]}
   />

@@ -3,77 +3,156 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact Tech Fytra - Get Your Free Quote Today',
+  description: 'Ready to start your digital project? Contact Tech Fytra for a free consultation. We\'re here to help transform your business with professional digital solutions.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText 
+    tagline="Get In Touch" 
+    title="Let's Build Something Amazing Together!" 
+    subtitle="Ready to transform your business with professional digital solutions? We're here to help you succeed. Get your free consultation today."
+  />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Start Your Digital Journey Today!"
+    subtitle="Tell us about your project and we'll get back to you within 24 hours with a customized proposal. No obligation, just great ideas!"
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Full Name',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Email Address',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Phone Number',
+      },
+      {
+        type: 'text',
+        name: 'company',
+        label: 'Company Name (Optional)',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Tell us about your project',
+      placeholder: 'Describe your project, goals, timeline, and any specific requirements...',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By submitting this form, you agree to our privacy policy and consent to being contacted about your project.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Our team typically responds within 24 hours. For urgent inquiries, call us directly or use WhatsApp."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="Multiple Ways to Reach Us"
+    subtitle="Choose the method that works best for you"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'WhatsApp Support',
+        description: `Get instant responses to your questions via WhatsApp. Perfect for quick queries and project discussions. Available during business hours.`,
+        icon: 'tabler:message-circle',
       },
       {
-        title: 'Contact sales',
+        title: 'Phone Consultation',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Call us directly for immediate assistance. Our team is ready to discuss your project and answer all your questions.',
+        icon: 'tabler:phone',
       },
       {
-        title: 'Technical support',
+        title: 'Email Support',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
+          'Send us detailed project requirements via email. We\'ll respond with a comprehensive proposal tailored to your needs.',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Office Visit',
+        description: 'Visit our office in Kathmandu for face-to-face discussions. We\'re located in the heart of the city.',
         icon: 'tabler:map-pin',
       },
+      {
+        title: 'Video Call',
+        description: 'Schedule a video consultation for remote meetings. Perfect for clients outside Kathmandu or those who prefer virtual meetings.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Social Media',
+        description: 'Follow us on social media for updates, tips, and to see our latest work. DM us for quick questions.',
+        icon: 'tabler:brand-facebook',
+      },
     ]}
+  />
+
+  <!-- Contact Information Section -->
+  <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Contact Information
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Get in touch with us through any of these channels
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg">
+          <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <astro-icon name="tabler:phone" class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Phone</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">+977 984-1234567</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri: 9 AM - 6 PM</p>
+        </div>
+        
+        <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg">
+          <div class="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+            <astro-icon name="tabler:mail" class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Email</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">info@techfytra.com</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Response within 24 hours</p>
+        </div>
+        
+        <div class="text-center p-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg">
+          <div class="w-16 h-16 bg-gradient-tech rounded-full flex items-center justify-center mx-auto mb-4">
+            <astro-icon name="tabler:map-pin" class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Office</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">Thamel, Kathmandu</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Nepal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '#form',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    title="Ready to Get Started?"
+    subtitle="Don't wait to transform your business. Contact us today and let's create something amazing together. Your success is our priority."
   />
 </Layout>

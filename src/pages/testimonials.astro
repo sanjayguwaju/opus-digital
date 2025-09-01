@@ -1,0 +1,166 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'Client Testimonials - Tech Fytra',
+  description: 'Read what our clients say about Tech Fytra. Real feedback from businesses we\'ve helped transform with our digital solutions.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText 
+    tagline="Client Success Stories" 
+    title="What Our Clients Say About Us"
+    subtitle="Real feedback from businesses we've helped transform. Discover why companies choose Tech Fytra for their digital needs."
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Client Satisfaction', amount: '98%' },
+      { title: 'Project Success Rate', amount: '100%' },
+      { title: 'Repeat Clients', amount: '85%' },
+      { title: 'Average Rating', amount: '4.9/5' },
+    ]}
+  />
+
+  <!-- Main Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Client Testimonials"
+    subtitle="Hear directly from the businesses we've helped grow"
+    testimonials={[
+      {
+        testimonial: `Tech Fytra transformed our business with a professional website and digital marketing strategy. Our online presence has never been stronger, and we're seeing real growth in our customer base. The team's understanding of the Nepali market made all the difference.`,
+        name: 'Rajesh Shrestha',
+        job: 'Owner, Himalayan Crafts',
+        image: {
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Rajesh Shrestha',
+        },
+      },
+      {
+        testimonial: `The team at Tech Fytra delivered our e-commerce website on time and within budget. The site looks professional and functions perfectly. Our online sales have increased by 300% since launch. Their ongoing support has been invaluable.`,
+        name: 'Priya Tamang',
+        job: 'Founder, Nepali Fashion',
+        image: {
+          src: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Priya Tamang',
+        },
+      },
+      {
+        testimonial: `As a startup, we needed a mobile app that could compete with established players. Tech Fytra delivered exactly what we needed - a fast, user-friendly app that our customers love. Their technical expertise is world-class.`,
+        name: 'Amit Thapa',
+        job: 'CEO, FoodDelivery Nepal',
+        image: {
+          src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Amit Thapa',
+        },
+      },
+      {
+        testimonial: `Working with Tech Fytra was a game-changer for our tourism business. Their SEO and digital marketing strategies helped us reach international customers. The results exceeded our expectations.`,
+        name: 'Sita Gurung',
+        job: 'Marketing Director, Nepal Adventures',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+          alt: 'Sita Gurung',
+        },
+      },
+      {
+        testimonial: `Tech Fytra built us a custom web application that streamlined our entire business process. The team's attention to detail and understanding of our industry needs was impressive. Highly recommended!`,
+        name: 'Bikash Karki',
+        job: 'Operations Manager, Tech Solutions Nepal',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Bikash Karki',
+        },
+      },
+      {
+        testimonial: `From the initial consultation to the final launch, Tech Fytra was professional and responsive. Our new website has significantly improved our online presence and customer engagement.`,
+        name: 'Anita Basnet',
+        job: 'Director, Creative Design Studio',
+        image: {
+          src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80',
+          alt: 'Anita Basnet',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'View Our Portfolio',
+      href: '/portfolio',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- Industry Testimonials -->
+  <div class="py-16 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Success Across Industries
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          We've helped businesses in various sectors achieve their digital goals
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <astro-icon name="tabler:shopping-cart" class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">E-commerce</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">"300% increase in online sales"</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">- Himalayan Crafts</div>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+              <astro-icon name="tabler:device-mobile" class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Mobile Apps</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">"50,000+ downloads"</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">- FoodDelivery Nepal</div>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-tech rounded-full flex items-center justify-center mx-auto mb-4">
+              <astro-icon name="tabler:chart-line" class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Digital Marketing</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">"400% lead generation increase"</p>
+            <div class="text-sm text-gray-500 dark:text-gray-400">- Nepal Adventures</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Project',
+        href: '/contact',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    title="Ready to Join Our Success Stories?"
+    subtitle="Let's discuss your project and create something amazing together. Your success story could be next!"
+  />
+</Layout> 

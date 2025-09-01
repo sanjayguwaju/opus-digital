@@ -1,5 +1,5 @@
 site:
-  name: Yukti Tech
+  name: Tech Fytra
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
