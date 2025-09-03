@@ -16,6 +16,9 @@ metadata:
 
 ## The Next Wave of Online Shopping
 
+## Hardik
+This is sandesh bhaii
+
 
 E-commerce has been growing at an unprecedented rate, and as we step into 2025, the online shopping landscape is set to change even more. Businesses need to stay ahead of the curve to meet the evolving demands of consumers. In this blog, we will dive into the top e-commerce trends businesses must watch and adopt in 2025 to remain competitive in the ever-changing digital marketplace.
 
