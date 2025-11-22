@@ -17,7 +17,7 @@ import ServicesWidget from '~/components/widgets/Services.astro';
 import Stats from '~/components/widgets/Stats.astro';
 
 const metadata = {
-  title: 'Digital Services - Tech Fytra',
+  title: 'Digital Services - DTKSN',
   description: 'Professional website development, mobile apps, SEO, and digital marketing services in Nepal. Transform your business with our expert team.',
 };
 ---
@@ -51,7 +51,7 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Why Choose Tech Fytra?"
+    title="Why Choose DTKSN?"
     subtitle="We combine technical expertise with creative design to deliver exceptional results"
     tagline="Our Approach"
     columns={3}
@@ -175,7 +175,7 @@ const metadata = {
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Work With Us?</h3>
       <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-        Choosing Tech Fytra means choosing a partner who understands your business needs, speaks your language, and delivers results that exceed expectations.
+        Choosing DTKSN means choosing a partner who understands your business needs, speaks your language, and delivers results that exceed expectations.
       </p>
     </Fragment>
   </Content>
@@ -198,7 +198,7 @@ const metadata = {
     subtitle="Real feedback from businesses we've helped grow"
     testimonials={[
       {
-        testimonial: `Tech Fytra transformed our business with a professional website and digital marketing strategy. Our online presence has never been stronger, and we're seeing real growth in our customer base. Highly recommended!`,
+        testimonial: `DTKSN transformed our business with a professional website and digital marketing strategy. Our online presence has never been stronger, and we're seeing real growth in our customer base. Highly recommended!`,
         name: 'Rajesh Shrestha',
         job: 'Owner, Himalayan Crafts',
         image: {
@@ -207,7 +207,7 @@ const metadata = {
         },
       },
       {
-        testimonial: `The team at Tech Fytra delivered our e-commerce website on time and within budget. The site looks professional and functions perfectly. Our online sales have increased by 300% since launch.`,
+        testimonial: `The team at DTKSN delivered our e-commerce website on time and within budget. The site looks professional and functions perfectly. Our online sales have increased by 300% since launch.`,
         name: 'Priya Tamang',
         job: 'Founder, Nepali Fashion',
         image: {
@@ -216,7 +216,7 @@ const metadata = {
         },
       },
       {
-        testimonial: `As a startup, we needed a mobile app that could compete with established players. Tech Fytra delivered exactly what we needed - a fast, user-friendly app that our customers love.`,
+        testimonial: `As a startup, we needed a mobile app that could compete with established players. DTKSN delivered exactly what we needed - a fast, user-friendly app that our customers love.`,
         name: 'Amit Thapa',
         job: 'CEO, FoodDelivery Nepal',
         image: {

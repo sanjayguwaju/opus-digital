@@ -2,7 +2,6 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Services from '~/components/widgets/Services.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -25,101 +24,104 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get Started',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:rocket',
+        text: 'Hire Us for Development',
+        href: '/services',
+        icon: 'tabler:briefcase',
       },
-      { text: 'Learn more', href: '/why-every-business-needs-a-website-in-2025' },
+      {
+        text: 'Browse IT Courses',
+        href: '/courses',
+        target: '_blank',
+        icon: 'tabler:device-laptop',
+      },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero-image-1.png', alt: 'DTKSN digital solutions and training' }}
   >
     <Fragment slot="title">
-      Let's build your dream website together.
-      <span class="hidden xl:inline">Beautifully crafted with</span>
-      <span class="text-accent dark:text-white"> Tech Fytra</span>, your trusted digital partner.
+      <span class="text-2xl tracking-wider text-blue-600 uppercase font-bold mb-4 block"> Welcome to DTKSN </span>
+      We Engineer Digital Excellence. <br class="hidden lg:inline" />
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-700 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400"
+      >
+        We Train Future Masters.
+      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        From <span class="font-semibold">startups to enterprises</span>, we design and develop fast, modern, and
-        scalable websites that help you stand out online.
+        Bridge the gap between <strong>ideas and reality</strong>. Whether you are a startup needing a scalable app, or
+        a student seeking a career in code, <span class="font-semibold">DTKSN</span> is your partner in innovation.
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Smart. Modern. Reliable.</span>
-      Perfect for Businesses, SaaS, Portfolios, Landing Pages & Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"> Software Services & IT Academy. </span>
+      Your destination for top-tier Software Development and Industry-Standard Training.
     </Fragment>
   </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
   <!-- Features Widget *************** -->
 
   <Features2
     id="features"
-    title="Why Choose Tech Fytra?"
-    subtitle="Experience excellence in every aspect of your digital journey"
-    tagline="Our Capabilities"
+    title="Why Choose DTKSN?"
+    subtitle="We bridge the gap between industry demand and technical expertise."
+    tagline="Our Ecosystem"
     items={[
       {
-        title: 'Next-Generation Technology',
+        title: 'Custom Software Engineering',
         description:
-          'Harness the power of Astro and Tailwind CSS for blazing-fast, visually stunning websites that keep you ahead of the competition.',
+          "We don't just write code; we build business solutions. From high-performance websites to complex SaaS platforms, we engineer software that scales.",
         icon: 'tabler:code',
         callToAction: {
-          text: 'Learn More',
+          text: 'For Businesses',
+          href: '/services',
+        },
+      },
+      {
+        title: 'Project-Based Learning',
+        description:
+          'Forget theory-only lectures. Our students learn by building real-world applications, gaining the practical experience top employers demand.',
+        icon: 'tabler:school',
+        callToAction: {
+          text: 'For Students',
+          href: '/courses',
+        },
+      },
+      {
+        title: 'Modern Tech Stack',
+        description:
+          'Whether building for clients or teaching students, we use the latest tools: React, Next.js, Tailwind, Python, and Cloud technologies.',
+        icon: 'tabler:stack-2',
+        callToAction: {
+          text: 'See Our Tech',
           href: '#',
         },
       },
       {
-        title: 'Premium Design Components',
+        title: 'Career-Focused Mentorship',
         description:
-          'Launch your digital presence with our meticulously crafted, conversion-optimized components perfect for any business venture.',
-        icon: 'tabler:puzzle',
+          'We provide more than just classes. Students get resume reviews, mock interviews, and direct mentorship from working professionals.',
+        icon: 'tabler:users',
         callToAction: {
-          text: 'View Components',
+          text: 'Career Support',
           href: '#',
         },
       },
       {
-        title: 'Industry-Leading Standards',
+        title: 'Performance & SEO',
         description:
-          'Set new benchmarks with our cutting-edge practices in security, performance, and user experience.',
-        icon: 'tabler:award',
+          'Our development philosophy prioritizes Core Web Vitals and SEO. We ensure your digital presence is blazing fast and easily discoverable.',
+        icon: 'tabler:rocket',
         callToAction: {
-          text: 'Our Standards',
+          text: 'View Metrics',
           href: '#',
         },
       },
       {
-        title: 'Lightning Performance',
+        title: 'Long-Term Partnership',
         description:
-          'Experience unmatched speed with optimized Core Web Vitals that keep your visitors engaged and amazed.',
-        icon: 'tabler:bolt',
+          'For clients, we offer dedicated maintenance. For students, we offer lifetime community access. We are committed to your long-term success.',
+        icon: 'tabler:heart-handshake',
         callToAction: {
-          text: 'Speed Metrics',
-          href: '#',
-        },
-      },
-      {
-        title: 'SEO Mastery',
-        description:
-          'Dominate search rankings with our advanced strategies that connect your business with the right audience.',
-        icon: 'tabler:chart-bar',
-        callToAction: {
-          text: 'SEO Details',
-          href: '#',
-        },
-      },
-      {
-        title: 'Dedicated Support',
-        description:
-          'Get personalized attention and expert guidance throughout your journey to digital excellence.',
-        icon: 'tabler:heart',
-        callToAction: {
-          text: 'Our Process',
-          href: '#',
+          text: 'Contact Us',
+          href: '/contact',
         },
       },
     ]}
@@ -131,55 +133,117 @@ const metadata = {
     </Fragment>
     <Fragment slot="subtitle">
       <span class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-        We combine cutting-edge technology with creative excellence to deliver websites that make a lasting impact. 
-        Our approach is focused on your success, providing solutions that are:
-        <span class="font-semibold text-primary">Fast</span> • 
-        <span class="font-semibold text-primary">Beautiful</span> • 
-        <span class="font-semibold text-primary">Reliable</span>
+        Whether you are a startup founder looking for a <span class="font-semibold text-blue-600">dev team</span>, or a
+        student looking for a <span class="font-semibold text-purple-600">mentor</span>, DTKSN delivers excellence
+        through:
+        <br />
+        <span class="font-semibold text-primary">Innovation</span> •
+        <span class="font-semibold text-primary">Education</span> •
+        <span class="font-semibold text-primary">Execution</span>
       </span>
     </Fragment>
   </Features2>
 
   <!-- Services Widget *************** -->
-
   <Services
     id="services"
     tagline="Services"
     title="Our Digital Services"
-    subtitle="Comprehensive solutions to grow your business online - from websites to mobile apps, SEO to digital marketing"
-  />
+    subtitle="Comprehensive solutions to grow your business online. We blend creativity with technical expertise."
+    columns={3}
+    classes={{
+      container: 'max-w-7xl mx-auto',
+      panel:
+        'group relative rounded-3xl p-6 bg-white dark:bg-slate-900 shadow-xl shadow-gray-100/50 dark:shadow-slate-800/90 border border-transparent dark:border-slate-800 transition duration-300 hover:-translate-y-2 overflow-hidden hover:border-blue-500/50 dark:hover:border-blue-400/50',
+      icon: 'w-12 h-12 mb-4 text-blue-600 dark:text-blue-400 p-2 rounded-xl bg-blue-50 dark:bg-slate-800 group-hover:bg-blue-600 group-hover:text-white transition duration-300',
+    }}
+    items={[
+      {
+        title: 'Custom Web Development',
+        description:
+          'Blazing-fast, SEO-optimized websites built with modern tech (Astro, React, Next.js) designed to convert visitors into customers.',
+        icon: 'tabler:browser',
+      },
+      {
+        title: 'Mobile App Development',
+        description:
+          'Native-performance cross-platform mobile applications (iOS & Android) using Flutter and React Native.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'UI/UX Design',
+        description:
+          'Intuitive, accessible, and beautiful user interfaces backed by research to ensure a seamless user journey.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'SEO & Content Strategy',
+        description:
+          'Data-driven strategies to dominate search rankings, increase organic traffic, and build long-term online authority.',
+        icon: 'tabler:seo',
+      },
+      {
+        title: 'Digital Marketing',
+        description:
+          'Full-service digital campaigns including social media management, PPC, and email marketing to amplify your brand voice.',
+        icon: 'tabler:ad',
+      },
+      {
+        title: 'E-Commerce Solutions',
+        description:
+          'Secure, scalable online stores with seamless payment integration designed to maximize sales and manage inventory easily.',
+        icon: 'tabler:shopping-cart',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent">
+        <div
+          class="absolute inset-0 dark:bg-gradient-to-tr dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 opacity-40"
+        >
+        </div>
+      </div>
+    </Fragment>
+  </Services>
 
   <!-- Content Widget **************** -->
 
   <Content
     isReversed
-    tagline="Our Foundation"
-    title="Built with the Right Technology for Your Success"
+    tagline="Our Tech Stack"
+    title="Innovation Powered by Modern Technology"
     items={[
       {
-        title: 'Powered by Modern Frameworks',
+        title: 'State-of-the-Art Frontend',
         description:
-          'We use Astro 5.0 — a blazing-fast static site generator that ensures speed, scalability, and developer efficiency.',
+          'We build (and teach) using React, Next.js, and Astro. This ensures your applications are blazing fast, SEO-friendly, and offer an incredible user experience.',
       },
       {
-        title: 'Styled with Tailwind CSS',
+        title: 'Scalable Backend & Cloud',
         description:
-          'Delivering clean, responsive, and consistent designs — all while making customization faster and easier.',
+          'Reliability is key. We leverage Python, Node.js, and AWS/Azure cloud infrastructure to ensure your systems can handle growth without breaking a sweat.',
       },
       {
-        title: 'Cross-Browser Optimized',
+        title: 'Cross-Platform Mobile',
         description:
-          'Your website will look and perform seamlessly across all browsers and devices, ensuring a smooth user experience for everyone.',
+          'Reach users everywhere. We specialize in Flutter and React Native, allowing you to launch high-quality apps on both iOS and Android from a single codebase.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Modern web design workflow',
+      src: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'DTKSN Developer working on modern code stack',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on Modern Foundations</h3>
-      We combine cutting-edge technology with best practices to give your business a competitive advantage online.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        We Speak the Language of <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Future Tech.</span
+        >
+      </h3>
+      <p class="text-lg text-muted dark:text-slate-400">
+        At DTKSN, we don't rely on outdated tools. Whether we are building your product or training your future career,
+        we stick to the <strong>cutting edge</strong>.
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -193,33 +257,40 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Tailored to Your Brand',
-        description: `Every website we build is customized to reflect your unique identity — ensuring your brand stands out online.`,
+        title: 'Strategic UI/UX Design',
+        description: `We don't just design for looks; we design for behavior. Every layout is crafted to guide your visitors toward making a purchase or contacting you.`,
       },
       {
-        title: 'Flexible Layouts',
+        title: 'Mobile-First Architecture',
         description:
-          'Choose from multiple design structures to best showcase your content, keeping visitors engaged and improving navigation.',
+          'With over 60% of traffic coming from mobile, we build for smaller screens first, ensuring a flawless experience on phones, tablets, and desktops.',
       },
       {
-        title: 'Responsive by Default',
+        title: 'Interactive Animations',
         description:
-          'Optimized for all devices and screen sizes — delivering a seamless experience whether your audience is on desktop, tablet, or mobile.',
+          'Keep your users glued to the screen with smooth micro-interactions and animations powered by modern CSS and JavaScript libraries.',
       },
       {
-        title: 'Rich Media Integration',
+        title: 'Brand Consistency',
         description:
-          'Enhance your storytelling with images, videos, and interactive content that captivate and connect with your audience.',
+          'We align every pixel with your brand identity, creating a cohesive visual language that builds trust and recognition immediately.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Custom website blueprint',
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Tech Fytra UI/UX Design Process',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Your Website, Your Way</h3>
-      Ensure your online presence truly represents your brand and connects with your audience.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Design That <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600"
+          >Captivates & Converts.</span
+        >
+      </h3>
+      <p class="text-lg text-muted dark:text-slate-400">
+        A great website needs more than just clean code. It needs a soul. We craft digital experiences that look
+        stunning and perform perfectly.
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -300,6 +371,12 @@ const metadata = {
         icon: 'tabler:check',
       },
     ]}
+    classes={{
+      container: 'max-w-6xl',
+      items: {
+        icon: 'bg-blue-100 text-blue-600 border-blue-100 dark:bg-blue-900 dark:text-blue-200 dark:border-blue-900',
+      },
+    }}
     image={{
       src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
       alt: 'Website launch process',
@@ -312,60 +389,66 @@ const metadata = {
     title="Essential Website Sections"
     subtitle="We include all the key components your website needs for impact, usability, and conversions."
     tagline="Components"
+    classes={{
+      container: 'max-w-7xl',
+      panel:
+        'group relative rounded-2xl p-6 bg-white dark:bg-slate-900 shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-1 border border-transparent dark:border-slate-800',
+      icon: 'w-12 h-12 mb-4 text-white bg-gradient-to-br from-blue-600 to-purple-600 p-3 rounded-xl shadow-lg',
+    }}
     items={[
       {
         title: 'Headers',
         description:
           'Clear and structured navigation ensures visitors know exactly where to go from the moment they land on your site.',
-        icon: 'flat-color-icons:template',
+        icon: 'tabler:layout-navbar',
       },
       {
         title: 'Hero Sections',
         description:
           'Make a strong first impression with visually stunning hero sections that capture attention and communicate your brand instantly.',
-        icon: 'flat-color-icons:gallery',
+        icon: 'tabler:photo',
       },
       {
         title: 'Features',
         description:
           'Highlight your products, services, and unique value with dedicated feature sections that showcase what sets you apart.',
-        icon: 'flat-color-icons:approval',
+        icon: 'tabler:list-check',
       },
       {
         title: 'Content Blocks',
         description:
           'Engage your audience with well-structured content sections designed for readability, storytelling, and SEO performance.',
-        icon: 'flat-color-icons:document',
+        icon: 'tabler:article',
       },
       {
         title: 'Call-to-Action',
         description:
           'Guide visitors toward the next step with clear and persuasive CTAs, designed to boost conversions and engagement.',
-        icon: 'flat-color-icons:advertising',
+        icon: 'tabler:click',
       },
       {
         title: 'Pricing Tables',
         description:
           'Transparent and attractive pricing layouts help your customers make decisions quickly and confidently.',
-        icon: 'flat-color-icons:currency-exchange',
+        icon: 'tabler:currency-dollar',
       },
       {
         title: 'Testimonials',
         description:
           'Build trust and credibility with real customer stories, showcasing the positive impact of your work.',
-        icon: 'flat-color-icons:voice-presentation',
+        icon: 'tabler:message-star',
       },
       {
         title: 'Contact Forms',
         description:
           'Make it easy for clients to reach out with user-friendly forms that encourage inquiries and stronger connections.',
-        icon: 'flat-color-icons:business-contact',
+        icon: 'tabler:mail',
       },
       {
         title: 'Footers',
         description:
           'Provide quick access to key links, contact info, and brand details with professional and functional footers.',
-        icon: 'flat-color-icons:database',
+        icon: 'tabler:layout-bottombar',
       },
     ]}
   >

@@ -1,5 +1,5 @@
 site:
-  name: Tech Fytra
+  name: DTKSN
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false

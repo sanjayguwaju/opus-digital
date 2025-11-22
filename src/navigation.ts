@@ -15,18 +15,6 @@ export const headerData = {
       href: getPermalink('/services'),
     },
     {
-      text: 'Portfolio',
-      href: getPermalink('/portfolio'),
-    },
-    {
-      text: 'Testimonials',
-      href: getPermalink('/testimonials'),
-    },
-    {
-      text: 'Pricing',
-      href: getPermalink('/pricing'),
-    },
-    {
       text: 'Blog',
       href: getPermalink('/blog'),
     },
@@ -89,6 +77,6 @@ export const footerData = {
     { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'https://wa.me/9779841234567' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-400" href="/">Tech Fytra</a> · All rights reserved.
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-400" href="/">DTKSN</a> · All rights reserved.
   `,
 };
